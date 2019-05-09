@@ -5,8 +5,8 @@ namespace AlibabaCloud\Imm;
 use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
- * @deprecated
+ * @method static V20170906\ImmApiResolver v20170906()
  */
-class ImmVersion extends VersionResolver
+class Imm extends VersionResolver
 {
 }
