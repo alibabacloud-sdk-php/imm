@@ -20,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateVideoAbstractTask createVideoAbstractTask(array $options = [])
  * @method CreateVideoAnalyseTask createVideoAnalyseTask(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
+ * @method CreateVideoProduceTask createVideoProduceTask(array $options = [])
  * @method DecodeBlindWatermark decodeBlindWatermark(array $options = [])
  * @method DeleteDocIndex deleteDocIndex(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
@@ -42,8 +43,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FindImages findImages(array $options = [])
  * @method FindImagesByTagNames findImagesByTagNames(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
+ * @method GetContentKey getContentKey(array $options = [])
  * @method GetDocIndex getDocIndex(array $options = [])
  * @method GetDocIndexTask getDocIndexTask(array $options = [])
+ * @method GetDRMLicense getDRMLicense(array $options = [])
  * @method GetImage getImage(array $options = [])
  * @method GetImageJob getImageJob(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
@@ -72,6 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefreshOfficeEditToken refreshOfficeEditToken(array $options = [])
  * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
  * @method SearchDocIndex searchDocIndex(array $options = [])
+ * @method StopStreamAnalyseTask stopStreamAnalyseTask(array $options = [])
  * @method UpdateDocIndexMeta updateDocIndexMeta(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
  * @method UpdateImage updateImage(array $options = [])
@@ -466,6 +470,32 @@ class CreateVideoCompressTask extends Rpc
 }
 
 /**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getMusic()
+ * @method $this withMusic($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getTargetUri()
+ * @method $this withTargetUri($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getCustomMessage()
+ * @method $this withCustomMessage($value)
+ * @method string getImages()
+ * @method $this withImages($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ */
+class CreateVideoProduceTask extends Rpc
+{
+}
+
+/**
  * @method string getImageQuality()
  * @method $this withImageQuality($value)
  * @method string getProject()
@@ -688,6 +718,8 @@ class EncodeBlindWatermark extends Rpc
 }
 
 /**
+ * @method string getRemarksArrayBIn()
+ * @method $this withRemarksArrayBIn($value)
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getExternalId()
@@ -720,6 +752,8 @@ class EncodeBlindWatermark extends Rpc
  * @method $this withAddressLineContentsMatch($value)
  * @method string getGender()
  * @method $this withGender($value)
+ * @method string getRemarksArrayAIn()
+ * @method $this withRemarksArrayAIn($value)
  * @method string getImageSizeRange()
  * @method $this withImageSizeRange($value)
  * @method string getRemarksBPrefix()
@@ -786,6 +820,20 @@ class FindSimilarFaces extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ * @method string getDRMServerId()
+ * @method $this withDRMServerId($value)
+ * @method string getKeyIds()
+ * @method $this withKeyIds($value)
+ */
+class GetContentKey extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  * @method string getSet()
@@ -802,6 +850,18 @@ class GetDocIndex extends Rpc
  * @method $this withTaskId($value)
  */
 class GetDocIndexTask extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getDRMType()
+ * @method $this withDRMType($value)
+ * @method string getDRMLicense()
+ * @method $this withDRMLicense($value)
+ */
+class GetDRMLicense extends Rpc
 {
 }
 
@@ -880,10 +940,22 @@ class GetOfficeEditURL extends Rpc
  * @method $this withSrcType($value)
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getUseOldURL()
- * @method $this withUseOldURL($value)
+ * @method string getWatermarkVertical()
+ * @method $this withWatermarkVertical($value)
+ * @method string getWatermarkType()
+ * @method $this withWatermarkType($value)
+ * @method string getWatermarkRotate()
+ * @method $this withWatermarkRotate($value)
+ * @method string getWatermarkValue()
+ * @method $this withWatermarkValue($value)
+ * @method string getWatermarkFont()
+ * @method $this withWatermarkFont($value)
+ * @method string getWatermarkHorizontal()
+ * @method $this withWatermarkHorizontal($value)
  * @method string getSrcUri()
  * @method $this withSrcUri($value)
+ * @method string getWatermarkFillStyle()
+ * @method $this withWatermarkFillStyle($value)
  */
 class GetOfficePreviewURL extends Rpc
 {
@@ -950,6 +1022,10 @@ class GetVideoTask extends Rpc
  * @method $this withRemarksA($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
+ * @method string getRemarksArrayA()
+ * @method $this withRemarksArrayA($value)
+ * @method string getRemarksArrayB()
+ * @method $this withRemarksArrayB($value)
  * @method string getSourceUri()
  * @method $this withSourceUri($value)
  * @method string getSourcePosition()
@@ -1240,6 +1316,16 @@ class SearchDocIndex extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class StopStreamAnalyseTask extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  * @method string getCustomKey1()
@@ -1292,6 +1378,10 @@ class UpdateFaceGroup extends Rpc
  * @method $this withRemarksA($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
+ * @method string getRemarksArrayA()
+ * @method $this withRemarksArrayA($value)
+ * @method string getRemarksArrayB()
+ * @method $this withRemarksArrayB($value)
  * @method string getSourceUri()
  * @method $this withSourceUri($value)
  * @method string getSourcePosition()
