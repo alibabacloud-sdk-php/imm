@@ -14,7 +14,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method CreateOfficeConversionTask createOfficeConversionTask(array $options = [])
  * @method CreateSet createSet(array $options = [])
- * @method CreateStreamAnalyseTask createStreamAnalyseTask(array $options = [])
  * @method CreateVideoAbstractTask createVideoAbstractTask(array $options = [])
  * @method CreateVideoAnalyseTask createVideoAnalyseTask(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
@@ -224,6 +223,8 @@ class CreateMediaComplexTask extends Rpc
  * @method $this withProject($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
+ * @method string getCustomMessage()
+ * @method $this withCustomMessage($value)
  * @method string getGroupIdFrom()
  * @method $this withGroupIdFrom($value)
  * @method string getNotifyTopicName()
@@ -246,6 +247,8 @@ class CreateMergeFaceGroupsJob extends Rpc
  * @method $this withIdempotentToken($value)
  * @method string getPdfVector()
  * @method $this withPdfVector($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getPassword()
  * @method $this withPassword($value)
  * @method string getStartPage()
@@ -300,32 +303,6 @@ class CreateOfficeConversionTask extends Rpc
  * @method $this withSetId($value)
  */
 class CreateSet extends Rpc
-{
-}
-
-/**
- * @method string getGrabType()
- * @method $this withGrabType($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getStreamUri()
- * @method $this withStreamUri($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getSaveType()
- * @method $this withSaveType($value)
- * @method string getInterval()
- * @method $this withInterval($value)
- * @method string getTgtUri()
- * @method $this withTgtUri($value)
- */
-class CreateStreamAnalyseTask extends Rpc
 {
 }
 
@@ -390,6 +367,8 @@ class CreateVideoAnalyseTask extends Rpc
  * @method $this withTargetList($value)
  * @method string getVideoUri()
  * @method $this withVideoUri($value)
+ * @method string getTargetSegment()
+ * @method $this withTargetSegment($value)
  */
 class CreateVideoCompressTask extends Rpc
 {
@@ -876,10 +855,14 @@ class GetVideoTask extends Rpc
  * @method $this withProject($value)
  * @method string getFile()
  * @method $this withFile($value)
+ * @method string getHidecmb()
+ * @method $this withHidecmb($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
  * @method string getFileID()
  * @method $this withFileID($value)
+ * @method string getWatermark()
+ * @method $this withWatermark($value)
  * @method string getNotifyTopicName()
  * @method $this withNotifyTopicName($value)
  * @method string getPermission()
@@ -1194,6 +1177,8 @@ class RefreshWebofficeToken extends Rpc
  * @method $this withRemarksA($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
+ * @method string getResetItems()
+ * @method $this withResetItems($value)
  * @method string getRemarksArrayA()
  * @method $this withRemarksArrayA($value)
  * @method string getRemarksArrayB()
